@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     Button xyzReader;
     Button capstone;
     Context context;
+    private Toast mAppToast;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,56 +31,68 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         context = getApplicationContext();
-        title = (TextView)findViewById(R.id.textView);
-        spotifyStreamer = (Button)findViewById(R.id.button);
-        spotifyStreamer.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Do something in response to button click
-                Toast.makeText(context, "This Button will Launch My Spotify Streamer App", Toast.LENGTH_SHORT).show();
-            }
-        });
-        scoresApp = (Button)findViewById(R.id.button2);
-        scoresApp.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Do something in response to button click
-                Toast.makeText(context, "This Button will Launch My Scores App", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-        libraryApp = (Button)findViewById(R.id.button3);
-        libraryApp.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Do something in response to button click
-                Toast.makeText(context, "This Button will Launch My Library App", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-        buildItBigger = (Button)findViewById(R.id.button4);
-        buildItBigger.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Do something in response to button click
-                Toast.makeText(context, "This Button will Launch My Build It Bigger App", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-        xyzReader = (Button)findViewById(R.id.button5);
-        xyzReader.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Do something in response to button click
-                Toast.makeText(context, "This Button will Launch My XYZ Reader App", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-        capstone = (Button)findViewById(R.id.button6);
-        capstone.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Do something in response to button click
-                Toast.makeText(context, "This Button will Launch My own App", Toast.LENGTH_SHORT).show();
-
-            }
-        });
+        title = (TextView)findViewById(R.id.text_view_title);
+        spotifyStreamer = (Button)findViewById(R.id.first_app_button);
+        scoresApp = (Button)findViewById(R.id.second_app_button);
+        libraryApp = (Button)findViewById(R.id.third_app_button);
+        buildItBigger = (Button)findViewById(R.id.forth_app_button);
+        xyzReader = (Button)findViewById(R.id.fifth_app_button);
+        capstone = (Button)findViewById(R.id.sixth_app_button);
     }
 
+    public void buttonOnClick(View view)
+    {
+        switch(view.getId())
+        {
+            case R.id.first_app_button:
+                if(mAppToast !=null){
+                    mAppToast.cancel();
+                }
+                mAppToast = Toast.makeText(this,context.getResources().getString(R.string.string_on_toast)+context.getResources().getString(R.string.first_app),Toast.LENGTH_SHORT);
+                mAppToast.show();
+                break;
+
+            case R.id.second_app_button:
+                if(mAppToast !=null){
+                    mAppToast.cancel();
+                }
+                mAppToast = Toast.makeText(this,context.getResources().getString(R.string.string_on_toast)+context.getResources().getString(R.string.second_app),Toast.LENGTH_SHORT);
+                mAppToast.show();
+                break;
+
+            case R.id.third_app_button:
+                if(mAppToast !=null){
+                    mAppToast.cancel();
+                }
+                mAppToast = Toast.makeText(this,context.getResources().getString(R.string.string_on_toast)+context.getResources().getString(R.string.third_app),Toast.LENGTH_SHORT);
+                mAppToast.show();
+                break;
+
+            case R.id.forth_app_button:
+                if(mAppToast !=null){
+                    mAppToast.cancel();
+                }
+                mAppToast = Toast.makeText(this,context.getResources().getString(R.string.string_on_toast)+context.getResources().getString(R.string.forth_app),Toast.LENGTH_SHORT);
+                mAppToast.show();
+                break;
+
+            case R.id.fifth_app_button:
+                if(mAppToast !=null){
+                    mAppToast.cancel();
+                }
+                mAppToast = Toast.makeText(this,context.getResources().getString(R.string.string_on_toast)+context.getResources().getString(R.string.fifth_app),Toast.LENGTH_SHORT);
+                mAppToast.show();
+                break;
+
+            case R.id.sixth_app_button:
+                if(mAppToast !=null){
+                    mAppToast.cancel();
+                }
+                mAppToast = Toast.makeText(this,context.getResources().getString(R.string.string_on_toast)+context.getResources().getString(R.string.sixth_app),Toast.LENGTH_SHORT);
+                mAppToast.show();
+                break;
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
@@ -13,86 +18,101 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="My Nanodegree Apps!"
-        android:id="@+id/textView"
+        android:text="@string/text_view_title"
+        android:id="@+id/text_view_title"
+        android:layout_marginTop="@dimen/text_view_layout_marginTop"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spotify Streamer"
-        android:id="@+id/button"
-        android:layout_marginTop="30dp"
-        android:background="#F08C35"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:text="@string/first_app"
+        android:id="@+id/first_app_button"
+        android:layout_marginTop="@dimen/first_app_button_layout_marginTop"
+        style="@style/AppsButtons"
+        android:layout_below="@+id/text_view_title"
+        android:layout_alignRight="@+id/text_view_title"
+        android:layout_alignEnd="@+id/text_view_title"
+        android:layout_alignLeft="@+id/text_view_title"
+        android:layout_alignStart="@+id/text_view_title"
+        android:onClick="buttonOnClick"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scores App"
-        android:id="@+id/button2"
-        android:background="#F08C35"
-        android:layout_below="@+id/button"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_marginTop="15dp"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
+        android:text="@string/second_app"
+        android:id="@+id/second_app_button"
+        style="@style/AppsButtons"
+        android:layout_below="@+id/first_app_button"
+        android:layout_alignLeft="@+id/first_app_button"
+        android:layout_alignStart="@+id/first_app_button"
+        android:layout_marginTop="@dimen/apps_button_layout_marginTop"
+        android:layout_alignRight="@+id/first_app_button"
+        android:layout_alignEnd="@+id/first_app_button"
+        android:onClick="buttonOnClick"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Library App"
-        android:id="@+id/button3"
-        android:background="#F08C35"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button4"
-        android:layout_alignStart="@+id/button4"
-        android:layout_marginTop="15dp"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:text="@string/third_app"
+        android:id="@+id/third_app_button"
+        style="@style/AppsButtons"
+        android:layout_below="@+id/second_app_button"
+        android:layout_alignLeft="@+id/forth_app_button"
+        android:layout_alignStart="@+id/forth_app_button"
+        android:layout_marginTop="@dimen/apps_button_layout_marginTop"
+        android:layout_alignRight="@+id/second_app_button"
+        android:layout_alignEnd="@+id/second_app_button"
+        android:onClick="buttonOnClick"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Build It Bigger"
-        android:id="@+id/button4"
-        android:background="#F08C35"
-        android:layout_below="@+id/button3"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_marginTop="15dp"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:text="@string/forth_app"
+        android:id="@+id/forth_app_button"
+        style="@style/AppsButtons"
+        android:layout_below="@+id/third_app_button"
+        android:layout_alignLeft="@+id/second_app_button"
+        android:layout_alignStart="@+id/second_app_button"
+        android:layout_marginTop="@dimen/apps_button_layout_marginTop"
+        android:layout_alignRight="@+id/second_app_button"
+        android:layout_alignEnd="@+id/second_app_button"
+        android:onClick="buttonOnClick"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="XYZ Reader"
-        android:id="@+id/button5"
-        android:background="#F08C35"
-        android:layout_below="@+id/button4"
-        android:layout_alignLeft="@+id/button4"
-        android:layout_alignStart="@+id/button4"
-        android:layout_marginTop="15dp"
-        android:layout_alignRight="@+id/button4"
-        android:layout_alignEnd="@+id/button4" />
+        android:text="@string/fifth_app"
+        android:id="@+id/fifth_app_button"
+        style="@style/AppsButtons"
+        android:layout_below="@+id/forth_app_button"
+        android:layout_alignLeft="@+id/forth_app_button"
+        android:layout_alignStart="@+id/forth_app_button"
+        android:layout_marginTop="@dimen/apps_button_layout_marginTop"
+        android:layout_alignRight="@+id/forth_app_button"
+        android:layout_alignEnd="@+id/forth_app_button"
+        android:onClick="buttonOnClick"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Capstone: MY OWN APP"
-        android:id="@+id/button6"
+        android:text="@string/sixth_app"
+        android:id="@+id/sixth_app_button"
         android:background="#E91E63"
-        android:layout_below="@+id/button5"
-        android:layout_alignLeft="@+id/button5"
-        android:layout_alignStart="@+id/button5"
-        android:layout_marginTop="15dp"
-        android:layout_alignRight="@+id/button5"
-        android:layout_alignEnd="@+id/button5" />
+        android:layout_below="@+id/fifth_app_button"
+        android:layout_alignLeft="@+id/fifth_app_button"
+        android:layout_alignStart="@+id/fifth_app_button"
+        android:layout_marginTop="@dimen/apps_button_layout_marginTop"
+        android:layout_alignRight="@+id/fifth_app_button"
+        android:layout_alignEnd="@+id/fifth_app_button"
+        android:onClick="buttonOnClick"
+        />
+
 </RelativeLayout>
+</ScrollView>
